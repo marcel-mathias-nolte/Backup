@@ -1,15 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Backup
+﻿namespace Backup
 {
+    using System;
+    using System.Collections.Generic;
+
+    using Alphaleonis.Win32.Filesystem;
+    using Nolte.IO;
+
     class Program
     {
         static bool abort = false;
         static void Main(string[] args)
         {
+            using (Nolte.IO.VolumeShadowCopy vss = new VolumeShadowCopy("Z:\\"))
+            {
+                vss.DoSnapshot();
+                try
+                {
+                    string path = vss.GetSnapshotPath("Z:\\Downloads\\201212444.pdf");
+                    string path2 = vss.GetSnapshotPath(@"Z:\Downloads\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\_very_long_folder_name_\test.txt");
+                    Console.WriteLine(path);
+                    Console.WriteLine(path2);
+                    File.Copy(path, "C:\\201212444.pdf");
+                    File.Copy(path2, "C:\\test.txt");
+                }
+                catch (Exception)
+                {
+                }
+            }
+
+            return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             string SourceDir = "I";
             string TargetDir = "D";
             System.IO.FileStream LogFile = new System.IO.FileStream("C:\\" + SourceDir + "_BACKUP.log", System.IO.File.Exists("C:\\" + SourceDir + "_BACKUP.log") ? System.IO.FileMode.Append : System.IO.FileMode.OpenOrCreate);
