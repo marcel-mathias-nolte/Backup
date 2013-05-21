@@ -255,6 +255,46 @@
     <Compile Include="Security\Hashing.cs" />
     <Compile Include="Security\NativeMethods.cs" />
     <Compile Include="Security\UAC.cs" />
+    <Compile Include="UI\Api.cs" />
+    <Compile Include="UI\Api.ShellIcon.cs" />
+    <Compile Include="UI\DocumentBackgroundDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentBackgroundDialog.designer.cs">
+      <DependentUpon>DocumentBackgroundDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FindForm.designer.cs">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IMainMenuCapable.cs" />
+    <Compile Include="UI\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReplaceForm.designer.cs">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RTFEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RTFEditor.designer.cs">
+      <DependentUpon>RTFEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="UI\ToolStripSpringTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -285,8 +325,27 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LocalizedStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DocumentBackgroundDialog.resx">
+      <DependentUpon>DocumentBackgroundDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RTFEditor.resx">
+      <DependentUpon>RTFEditor.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="UI\Settings.settings">
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
