@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backup", "Backup\Backup.csproj", "{8107724A-E473-4EC7-9F76-A63506A6DE0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nolte.IO", "Nolte.IO\Nolte.IO.csproj", "{7E27ADBD-6520-4532-A633-8D684D4B91BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nolte", "Nolte.IO\Nolte.csproj", "{7E27ADBD-6520-4532-A633-8D684D4B91BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinBackup", "WinBackup\WinBackup.csproj", "{B5186BD6-C1A0-4D4E-9FED-FF106852CBE5}"
 EndProject

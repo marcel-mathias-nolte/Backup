@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace WinBackup
@@ -16,6 +10,7 @@ namespace WinBackup
             InitializeComponent();
 
 
+            Nolte.Security.UAC.CreateElevateButton(button1);
             timer1.Tick += (o, e) => { txtStatus.Text = DateTime.Now.ToString(); };
             timer1.Start();
         }

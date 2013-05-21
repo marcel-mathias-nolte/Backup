@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
 
-    using Alphaleonis.Win32.Filesystem;
     using Nolte.IO;
 
     class Program
@@ -11,7 +10,8 @@
         static bool abort = false;
         static void Main(string[] args)
         {
-            using (Nolte.IO.VolumeShadowCopy vss = new VolumeShadowCopy("Z:\\"))
+            
+            using (VolumeShadowCopy vss = new VolumeShadowCopy("Z:\\"))
             {
                 vss.DoSnapshot();
                 try

@@ -50,10 +50,12 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabStart = new System.Windows.Forms.TabPage();
             this.ctrlTabs = new System.Windows.Forms.TabControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPreconfiguration = new System.Windows.Forms.TabPage();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.ctrlStatusBar.SuspendLayout();
             this.ctrlMenuBar.SuspendLayout();
+            this.tabStart.SuspendLayout();
             this.ctrlTabs.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -216,6 +218,7 @@
             // tabStart
             // 
             this.tabStart.BackColor = System.Drawing.SystemColors.Control;
+            this.tabStart.Controls.Add(this.button1);
             this.tabStart.Location = new System.Drawing.Point(4, 22);
             this.tabStart.Name = "tabStart";
             this.tabStart.Padding = new System.Windows.Forms.Padding(3);
@@ -234,10 +237,6 @@
             this.ctrlTabs.Size = new System.Drawing.Size(1156, 590);
             this.ctrlTabs.TabIndex = 2;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 500;
-            // 
             // tabPreconfiguration
             // 
             this.tabPreconfiguration.Location = new System.Drawing.Point(4, 22);
@@ -246,6 +245,19 @@
             this.tabPreconfiguration.TabIndex = 1;
             this.tabPreconfiguration.Text = "Voreinstellungen";
             this.tabPreconfiguration.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(415, 233);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 38);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -262,6 +274,7 @@
             this.ctrlStatusBar.PerformLayout();
             this.ctrlMenuBar.ResumeLayout(false);
             this.ctrlMenuBar.PerformLayout();
+            this.tabStart.ResumeLayout(false);
             this.ctrlTabs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -293,6 +306,7 @@
         private System.Windows.Forms.ToolStripMenuItem newJobToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPreconfiguration;
+        private System.Windows.Forms.Button button1;
     }
 }
 

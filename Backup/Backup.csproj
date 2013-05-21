@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlphaFS">
-      <HintPath>..\Nolte.IO\AlphaFS.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,9 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nolte.IO\Nolte.IO.csproj">
+    <ProjectReference Include="..\Nolte.IO\Nolte.csproj">
       <Project>{7E27ADBD-6520-4532-A633-8D684D4B91BD}</Project>
-      <Name>Nolte.IO</Name>
+      <Name>Nolte</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
