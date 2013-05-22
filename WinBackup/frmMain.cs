@@ -11,6 +11,7 @@ namespace WinBackup
 
 
             Nolte.Security.UAC.CreateElevateButton(button1);
+            imageEditor1.MenuVisible = true;
             timer1.Tick += (o, e) => { txtStatus.Text = DateTime.Now.ToString(); };
             timer1.Start();
         }

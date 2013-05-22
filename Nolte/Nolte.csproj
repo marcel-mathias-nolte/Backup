@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E27ADBD-6520-4532-A633-8D684D4B91BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nolte</RootNamespace>
+    <AssemblyName>Nolte</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaVSS.Common">
+      <HintPath>..\AlphaVSS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Environment\Api.cs" />
+    <Compile Include="Environment\SingleInstance.cs" />
+    <Compile Include="Environment\SingleInstanceMode.cs" />
+    <Compile Include="Hardware\Generic.cs" />
+    <Compile Include="Hardware\Mainboard.cs" />
+    <Compile Include="Hardware\Processor.cs" />
+    <Compile Include="Hardware\Storage.cs" />
+    <Compile Include="IO\AccessMode.cs" />
+    <Compile Include="IO\AlternateDataStreams.cs" />
+    <Compile Include="IO\Backup\BackupJob.cs" />
+    <Compile Include="IO\ByHandleFileInformation.cs" />
+    <Compile Include="IO\Compression.cs" />
+    <Compile Include="IO\CreationDisposition.cs" />
+    <Compile Include="IO\Drive.cs" />
+    <Compile Include="IO\DriveSize.cs" />
+    <Compile Include="IO\FileAttributes.cs" />
+    <Compile Include="IO\FileShareMode.cs" />
+    <Compile Include="IO\Filesystem\AlreadyExistsException.cs" />
+    <Compile Include="IO\Filesystem\BackupFileStream.cs" />
+    <Compile Include="IO\Filesystem\BackupStreamInfo.cs" />
+    <Compile Include="IO\Filesystem\BackupStreamType.cs" />
+    <Compile Include="IO\Filesystem\ByHandleFileInfo.cs" />
+    <Compile Include="IO\Filesystem\CopyOptions.cs" />
+    <Compile Include="IO\Filesystem\CopyProgressCallbackReason.cs" />
+    <Compile Include="IO\Filesystem\CopyProgressResult.cs" />
+    <Compile Include="IO\Filesystem\CopyProgressRoutine.cs" />
+    <Compile Include="IO\Filesystem\DeviceIo.cs" />
+    <Compile Include="IO\Filesystem\DeviceNotReadyException.cs" />
+    <Compile Include="IO\Filesystem\Directory.cs" />
+    <Compile Include="IO\Filesystem\DirectoryInfo.cs" />
+    <Compile Include="IO\Filesystem\DirectoryNotEmptyException.cs" />
+    <Compile Include="IO\Filesystem\DiskSpaceInfo.cs" />
+    <Compile Include="IO\Filesystem\DriveType.cs" />
+    <Compile Include="IO\Filesystem\File.cs" />
+    <Compile Include="IO\Filesystem\FileAccess.cs" />
+    <Compile Include="IO\Filesystem\FileAttributes.cs" />
+    <Compile Include="IO\Filesystem\FileEncryptionStatus.cs" />
+    <Compile Include="IO\Filesystem\FileIdBothDirectoryInfo.cs" />
+    <Compile Include="IO\Filesystem\FileInfo.cs" />
+    <Compile Include="IO\Filesystem\FileMode.cs" />
+    <Compile Include="IO\Filesystem\FileOptions.cs" />
+    <Compile Include="IO\Filesystem\FileShare.cs" />
+    <Compile Include="IO\Filesystem\FileSystemEntryEnumerator.cs" />
+    <Compile Include="IO\Filesystem\FileSystemEntryInfo.cs" />
+    <Compile Include="IO\Filesystem\FileSystemInfo.cs" />
+    <Compile Include="IO\Filesystem\FileSystemRights.cs" />
+    <Compile Include="IO\Filesystem\FileTime.cs" />
+    <Compile Include="IO\Filesystem\FileType.cs" />
+    <Compile Include="IO\Filesystem\GlobalSuppressions.cs" />
+    <Compile Include="IO\Filesystem\IllegalPathException.cs" />
+    <Compile Include="IO\Filesystem\InvalidTransactionException.cs" />
+    <Compile Include="IO\Filesystem\IoControlCode.cs" />
+    <Compile Include="IO\Filesystem\KernelTransaction.cs" />
+    <Compile Include="IO\Filesystem\LinkTargetInfo.cs" />
+    <Compile Include="IO\Filesystem\MoveFileOptions.cs" />
+    <Compile Include="IO\Filesystem\NativeMethods.cs" />
+    <Compile Include="IO\Filesystem\NotAReparsePointException.cs" />
+    <Compile Include="IO\Filesystem\Path.cs" />
+    <Compile Include="IO\Filesystem\PathInfo.cs" />
+    <Compile Include="IO\Filesystem\PathInfoComponentList.cs" />
+    <Compile Include="IO\Filesystem\PathInfoParser.cs" />
+    <Compile Include="IO\Filesystem\ReparsePointTag.cs" />
+    <Compile Include="IO\Filesystem\SafeFindFileHandle.cs" />
+    <Compile Include="IO\Filesystem\SafeFindVolumeHandle.cs" />
+    <Compile Include="IO\Filesystem\SafeFindVolumeMountPointHandle.cs" />
+    <Compile Include="IO\Filesystem\SafeKernelTransactionHandle.cs" />
+    <Compile Include="IO\Filesystem\StreamAttributes.cs" />
+    <Compile Include="IO\Filesystem\SymbolicLinkTarget.cs" />
+    <Compile Include="IO\Filesystem\SymbolicLinkTargetInfo.cs" />
+    <Compile Include="IO\Filesystem\SymbolicLinkType.cs" />
+    <Compile Include="IO\Filesystem\TransactionalConflictException.cs" />
+    <Compile Include="IO\Filesystem\TransactionAlreadyAbortedException.cs" />
+    <Compile Include="IO\Filesystem\TransactionAlreadyCommittedException.cs" />
+    <Compile Include="IO\Filesystem\TransactionException.cs" />
+    <Compile Include="IO\Filesystem\UnrecognizedReparsePointException.cs" />
+    <Compile Include="IO\Filesystem\UnsupportedRemoteTransactionException.cs" />
+    <Compile Include="IO\Filesystem\Volume.cs" />
+    <Compile Include="IO\Filesystem\VolumeInfo.cs" />
+    <Compile Include="IO\Hardlink.cs" />
+    <Compile Include="IO\IniFile.cs" />
+    <Compile Include="IO\IniSection.cs" />
+    <Compile Include="IO\IniValue.cs" />
+    <Compile Include="IO\Junction.cs" />
+    <Compile Include="IO\Filesystem\NativeError.cs" />
+    <Compile Include="IO\OpenMode.cs" />
+    <Compile Include="IO\Zip.cs" />
+    <Compile Include="Net\Ftp.cs" />
+    <Compile Include="Net\PostArguments.cs" />
+    <Compile Include="Net\SessionBasedAsyncRequestArgs.cs" />
+    <Compile Include="Net\SessionBasedRequest.cs" />
+    <Compile Include="Net\WebClientEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IO\ReparseDataBuffer.cs" />
+    <Compile Include="IO\Filesystem\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IO\Filesystem\SafeGlobalMemoryBufferHandle.cs" />
+    <Compile Include="IO\Security\InternalPrivilegeEnabler.cs" />
+    <Compile Include="IO\Security\NativeMethods.cs" />
+    <Compile Include="IO\Security\Privilege.cs" />
+    <Compile Include="IO\Security\PrivilegeEnabler.cs" />
+    <Compile Include="IO\Security\SafeLocalMemoryBufferHandle.cs" />
+    <Compile Include="IO\StreamNotFoundException.cs" />
+    <Compile Include="IO\VolumeShadowCopy.cs" />
+    <Compile Include="IO\Filesystem\Win32Errors.cs" />
+    <Compile Include="Reflection\CodeCompiler.cs" />
+    <Compile Include="Security\Cryptography.cs" />
+    <Compile Include="Security\Hashing.cs" />
+    <Compile Include="Security\NativeMethods.cs" />
+    <Compile Include="Security\UAC.cs" />
+    <Compile Include="UI\Api.cs" />
+    <Compile Include="UI\Api.ShellIcon.cs" />
+    <Compile Include="UI\ChooseScreenDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChooseScreenDialog.designer.cs">
+      <DependentUpon>ChooseScreenDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DocumentBackgroundDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentBackgroundDialog.designer.cs">
+      <DependentUpon>DocumentBackgroundDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FindForm.designer.cs">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ImageEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ImageEditor.designer.cs">
+      <DependentUpon>ImageEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IMainMenuCapable.cs" />
+    <Compile Include="UI\InputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordChangeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordChangeDialog.designer.cs">
+      <DependentUpon>PasswordChangeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordDialog.designer.cs">
+      <DependentUpon>PasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReplaceForm.designer.cs">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RTFEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RTFEditor.designer.cs">
+      <DependentUpon>RTFEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ToolStripSpringTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\VirtualFile.cs" />
+    <Compile Include="UI\VirtualFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\VirtualFolder.designer.cs">
+      <DependentUpon>VirtualFolder.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IO\Filesystem\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChooseScreenDialog.resx">
+      <DependentUpon>ChooseScreenDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DocumentBackgroundDialog.resx">
+      <DependentUpon>DocumentBackgroundDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ImageEditor.resx">
+      <DependentUpon>ImageEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordChangeDialog.resx">
+      <DependentUpon>PasswordChangeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordDialog.resx">
+      <DependentUpon>PasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RTFEditor.resx">
+      <DependentUpon>RTFEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\VirtualFolder.resx">
+      <DependentUpon>VirtualFolder.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Settings.settings">
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

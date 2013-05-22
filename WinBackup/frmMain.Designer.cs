@@ -49,10 +49,11 @@
             this.predefinedSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabStart = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.ctrlTabs = new System.Windows.Forms.TabControl();
             this.tabPreconfiguration = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.imageEditor1 = new Nolte.UI.ImageEditor();
             this.ctrlStatusBar.SuspendLayout();
             this.ctrlMenuBar.SuspendLayout();
             this.tabStart.SuspendLayout();
@@ -218,6 +219,7 @@
             // tabStart
             // 
             this.tabStart.BackColor = System.Drawing.SystemColors.Control;
+            this.tabStart.Controls.Add(this.imageEditor1);
             this.tabStart.Controls.Add(this.button1);
             this.tabStart.Location = new System.Drawing.Point(4, 22);
             this.tabStart.Name = "tabStart";
@@ -225,6 +227,15 @@
             this.tabStart.Size = new System.Drawing.Size(1148, 564);
             this.tabStart.TabIndex = 0;
             this.tabStart.Text = "Start";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(8, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 90);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // ctrlTabs
             // 
@@ -250,14 +261,16 @@
             // 
             this.timer1.Interval = 500;
             // 
-            // button1
+            // imageEditor1
             // 
-            this.button1.Location = new System.Drawing.Point(415, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.imageEditor1.Image = null;
+            this.imageEditor1.InlineMenuVisible = true;
+            this.imageEditor1.Location = new System.Drawing.Point(313, 65);
+            this.imageEditor1.MenuVisible = false;
+            this.imageEditor1.Name = "imageEditor1";
+            this.imageEditor1.Size = new System.Drawing.Size(693, 405);
+            this.imageEditor1.TabIndex = 1;
+            this.imageEditor1.ToolbarVisible = false;
             // 
             // frmMain
             // 
@@ -307,6 +320,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPreconfiguration;
         private System.Windows.Forms.Button button1;
+        private Nolte.UI.ImageEditor imageEditor1;
     }
 }
 
