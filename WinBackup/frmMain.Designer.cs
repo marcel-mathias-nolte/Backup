@@ -53,7 +53,11 @@
             this.ctrlTabs = new System.Windows.Forms.TabControl();
             this.tabPreconfiguration = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.imageEditor1 = new Nolte.UI.ImageEditor();
+            this.clock1 = new LCARS.Clock();
+            this.curve1 = new LCARS.Curve();
+            this.button2 = new LCARS.Button();
+            this.bar1 = new LCARS.Bar();
+            this.threeMonthCalendar1 = new LCARS.ThreeMonthCalendar();
             this.ctrlStatusBar.SuspendLayout();
             this.ctrlMenuBar.SuspendLayout();
             this.tabStart.SuspendLayout();
@@ -219,7 +223,11 @@
             // tabStart
             // 
             this.tabStart.BackColor = System.Drawing.SystemColors.Control;
-            this.tabStart.Controls.Add(this.imageEditor1);
+            this.tabStart.Controls.Add(this.threeMonthCalendar1);
+            this.tabStart.Controls.Add(this.clock1);
+            this.tabStart.Controls.Add(this.curve1);
+            this.tabStart.Controls.Add(this.button2);
+            this.tabStart.Controls.Add(this.bar1);
             this.tabStart.Controls.Add(this.button1);
             this.tabStart.Location = new System.Drawing.Point(4, 22);
             this.tabStart.Name = "tabStart";
@@ -261,16 +269,69 @@
             // 
             this.timer1.Interval = 500;
             // 
-            // imageEditor1
+            // clock1
             // 
-            this.imageEditor1.Image = null;
-            this.imageEditor1.InlineMenuVisible = true;
-            this.imageEditor1.Location = new System.Drawing.Point(313, 65);
-            this.imageEditor1.MenuVisible = false;
-            this.imageEditor1.Name = "imageEditor1";
-            this.imageEditor1.Size = new System.Drawing.Size(693, 405);
-            this.imageEditor1.TabIndex = 1;
-            this.imageEditor1.ToolbarVisible = false;
+            this.clock1.AutoTimer = true;
+            this.clock1.DrawCircle = true;
+            this.clock1.DrawFiveMinutes = true;
+            this.clock1.DrawHourHand = true;
+            this.clock1.DrawMinuteHand = true;
+            this.clock1.DrawMinutes = true;
+            this.clock1.DrawSecondHand = true;
+            this.clock1.FaceColor = System.Drawing.Color.Orange;
+            this.clock1.FaceLineWidth = 1F;
+            this.clock1.HandColor = System.Drawing.Color.Red;
+            this.clock1.HourHandWidth = 5F;
+            this.clock1.Location = new System.Drawing.Point(371, 197);
+            this.clock1.MinuteHandWidth = 3F;
+            this.clock1.Name = "clock1";
+            this.clock1.SecondHandWidth = 1F;
+            this.clock1.Size = new System.Drawing.Size(150, 150);
+            this.clock1.TabIndex = 4;
+            // 
+            // curve1
+            // 
+            this.curve1.BackgroundColor = System.Drawing.Color.Blue;
+            this.curve1.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Bold);
+            this.curve1.HoverColor = System.Drawing.Color.Silver;
+            this.curve1.Location = new System.Drawing.Point(101, 100);
+            this.curve1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.curve1.Name = "curve1";
+            this.curve1.Size = new System.Drawing.Size(287, 100);
+            this.curve1.Style = LCARS.CurveStyle.UpRight;
+            this.curve1.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button2.FillStyle = LCARS.ButtonFillStyle.Filled;
+            this.button2.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Bold);
+            this.button2.HoverColor = System.Drawing.Color.Silver;
+            this.button2.Label = "TEST";
+            this.button2.Location = new System.Drawing.Point(101, 206);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 38);
+            this.button2.TabIndex = 2;
+            // 
+            // bar1
+            // 
+            this.bar1.BackgroundColor = System.Drawing.Color.Blue;
+            this.bar1.HoverColor = System.Drawing.Color.Silver;
+            this.bar1.Label = "";
+            this.bar1.Location = new System.Drawing.Point(395, 100);
+            this.bar1.Name = "bar1";
+            this.bar1.Size = new System.Drawing.Size(243, 51);
+            this.bar1.TabIndex = 1;
+            // 
+            // threeMonthCalendar1
+            // 
+            this.threeMonthCalendar1.Font = new System.Drawing.Font("Lucida Console", 8F, System.Drawing.FontStyle.Bold);
+            this.threeMonthCalendar1.Location = new System.Drawing.Point(262, 389);
+            this.threeMonthCalendar1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.threeMonthCalendar1.Name = "threeMonthCalendar1";
+            this.threeMonthCalendar1.Size = new System.Drawing.Size(200, 127);
+            this.threeMonthCalendar1.TabIndex = 5;
             // 
             // frmMain
             // 
@@ -320,7 +381,11 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPreconfiguration;
         private System.Windows.Forms.Button button1;
-        private Nolte.UI.ImageEditor imageEditor1;
+        private LCARS.Curve curve1;
+        private LCARS.Button button2;
+        private LCARS.Bar bar1;
+        private LCARS.Clock clock1;
+        private LCARS.ThreeMonthCalendar threeMonthCalendar1;
     }
 }
 

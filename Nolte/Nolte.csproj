@@ -158,6 +158,8 @@
     <Compile Include="IO\VolumeShadowCopy.cs" />
     <Compile Include="IO\Filesystem\Win32Errors.cs" />
     <Compile Include="Reflection\CodeCompiler.cs" />
+    <Compile Include="Reflection\Plugin.cs" />
+    <Compile Include="Reflection\PluginLoader.cs" />
     <Compile Include="Security\Cryptography.cs" />
     <Compile Include="Security\Hashing.cs" />
     <Compile Include="Security\NativeMethods.cs" />
@@ -191,6 +193,36 @@
     <Compile Include="UI\IMainMenuCapable.cs" />
     <Compile Include="UI\InputDialog.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LCARS\Bar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LCARS\Bar.Designer.cs">
+      <DependentUpon>Bar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LCARS\Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LCARS\Button.Designer.cs">
+      <DependentUpon>Button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LCARS\Clock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LCARS\Clock.Designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LCARS\Curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LCARS\Curve.Designer.cs">
+      <DependentUpon>Curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LCARS\Calendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LCARS\Calendar.designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\NumericTextBox.cs">
       <SubType>Component</SubType>
@@ -257,6 +289,21 @@
     <EmbeddedResource Include="UI\ImageEditor.resx">
       <DependentUpon>ImageEditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\LCARS\Bar.resx">
+      <DependentUpon>Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LCARS\Button.resx">
+      <DependentUpon>Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LCARS\Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LCARS\Curve.resx">
+      <DependentUpon>Curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LCARS\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\PasswordChangeDialog.resx">
       <DependentUpon>PasswordChangeDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +328,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
